@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="qstyle.css" />
+  </head>
+    <body>
+        <main class="terminus">
+           <h2>Ready to begin?</h2>
+           <button onclick="startQuiz()">Start</button>
+           <content id="select">
+               <h3 id="question"></h3>
+               <ul class="ans" onclick="evalAns(1)"></ul>
+               <ul class="ans" onclick="evalAns(2)"></ul>
+               <ul class="ans" onclick="evalAns(3)"></ul>
+               <ul class="ans" onclick="evalAns(4)"></ul>
+           </content>
+
+
+        </main>
+        <aside class="scorecard">
+          <h3>Score: </h3>
+        </aside>
+
+      <script src="quiz.js"></script>
+
+    </body>
+</html>      
