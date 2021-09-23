@@ -7,25 +7,38 @@
     <title>Code Quiz</title>
     <link rel="stylesheet" href="qstyle.css" />
   </head>
-    <body>
-        <main class="terminus">
-           <h2>Ready to begin?</h2>
-           <button onclick="startQuiz()">Start</button>
-           <content id="select">
-               <h3 id="question"></h3>
-               <ul class="ans" onclick="evalAns(1)"></ul>
-               <ul class="ans" onclick="evalAns(2)"></ul>
-               <ul class="ans" onclick="evalAns(3)"></ul>
-               <ul class="ans" onclick="evalAns(4)"></ul>
-           </content>
+  <body>
+    <main class="terminus">
+      <section class="ciao">
+        <h2>Ready to begin?</h2>
+        <button onclick="startQuiz()">Start</button>
+      </section>
+      <!-- 'ans' class reveals answer choices that are clickable & initiates evalAns function with given paramerter -->
+      <content id="select">
+        <h3 id="question"></h3>
+        <ul class="ans" onclick="evalAns(1)"></ul>
+        <ul class="ans" onclick="evalAns(2)"></ul>
+        <ul class="ans" onclick="evalAns(3)"></ul>
+        <ul class="ans" onclick="evalAns(4)"></ul>
+        <p id = "cue"></p>
+      </content>
+      <!-- input form for initials and score which is saved to local storage -->
+      <form id="score-form" method="POST">
+        <label for="scoreBoard">Congrats!: </label>
+        <input
+          type="text"
+          placeholder="Add Initials"
+          name="scoreBoard"                 
+          id="scoreBoard"
+        />
+        <input type="submit" />
+      </form>
+    </main>
+    <aside class="scorecard">
+      <h3>Scores:</h3>
+      <ol></ol>
+    </aside>
 
-
-        </main>
-        <aside class="scorecard">
-          <h3>Score: </h3>
-        </aside>
-
-      <script src="quiz.js"></script>
-
-    </body>
-</html>      
+    <script src="quiz.js"></script>
+  </body>
+</html>

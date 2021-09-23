@@ -2,16 +2,27 @@ body {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+    background-color: rgb(189, 152, 137);
 }
 
 .terminus {
-    border: 3px solid lightseagreen
+    text-align: center;
+    border: 3px solid lightseagreen;
+    background-color: white;
+    width: 70%;
+    height: 350px;
 }
 .scorecard {
     border: 3px solid green;
     background-color: rgb(253, 223, 184);
+    width: 25%;
+    height: 200px;
 }
 ul:hover {
    border: 1px dotted black;
    cursor: pointer;
 }
+#score-form {
+  display: none;
+}
+
